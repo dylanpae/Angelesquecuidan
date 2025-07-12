@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angeles que Cuidan</title>
+    <base target="_self">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@preline/preline@2.0.0/dist/preline.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        secondary: '#10B981',
+                        dark: '#032972', 
+                        light: '#F8FAFC',
+                        whatsapp: '#25D366'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .logo-container {
+            transition: all 0.3s ease;
+        }
+        .logo-container:hover {
+            transform: scale(1.05);
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #3B82F6;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .hero-section {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .whatsapp-btn {
+            transition: all 0.3s ease;
+        }
+        .whatsapp-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+        .message-option {
+            transition: all 0.2s ease;
+        }
+        .message-option:hover {
+            background-color: #f0fdf4;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 dark:bg-[#032972] text-gray-800 dark:text-light">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white dark:bg-[#032972] text-gray-800 dark:text-light">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <!-- Logo grande como botón -->
+                <button id="logoBtn" class="logo-container flex items-center space-x-2 focus:outline-none">
+                    
+                        <img src="Assets/VECILOGO AZULp.jpeg" width="226" height="96">
+         
+                </button>
+
+                <!-- Menú de navegación -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#" class="nav-link text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary font-medium" data-section="about">Quiénes Somos</a>
+                    <a href="#" class="nav-link text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary font-medium" data-section="team">Personal</a>
+                    <a href="#" class="nav-link text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary font-medium" data-section="contact">Contáctanos</a>
+                    <button id="appointmentBtn" class="bg-secondary hover:bg-green-600 text-white px-4 py-2 rounded-lg transition duration-300 transform hover:scale-105">
+                        <i class="fas fa-calendar-check mr-2"></i>Agendar Cita
+                    </button>
+                </nav>
+
+                <!-- Menú móvil -->
+                <button id="mobileMenuBtn" class="md:hidden text-gray-700 dark:text-gray-300 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+
+            <!-- Menú móvil desplegable -->
+            <div id="mobileMenu" class="hidden md:hidden mt-4 pb-4">
+                <a href="#" class="block py-2 text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary font-medium" data-section="about">Quiénes Somos</a>
+                <a href="#" class="block py-2 text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary font-medium" data-section="team">Personal</a>
+                <a href="#" class="block py-2 text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary font-medium" data-section="contact">Contáctanos</a>
+                <button id="mobileAppointmentBtn" class="mt-2 w-full bg-secondary hover:bg-green-600 text-white px-4 py-2 rounded-lg transition duration-300">
+                    <i class="fas fa-calendar-check mr-2"></i>Agendar Cita
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sección Hero -->
+    <section class="hero-section text-white py-20 md:py-32">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Cuidando tu salud con excelencia</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">Profesionales comprometidos con tu bienestar integral</p>
+            <button class="bg-primary hover:bg-blue-700 text-white px-6 py-3 rounded-lg text-lg font-medium transition duration-300 transform hover:scale-105">
+                <i class="fas fa-phone-alt mr-2"></i>Llamar ahora
+            </button>
+        </div>
+    </section>
+
+    <!-- Sección Quiénes Somos -->
+    <section id="about" class="py-16 bg-white dark:bg-[#0c2451] text-gray-800 dark:text-light">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-primary dark:text-secondary">Quiénes Somos</h2>
+            <div class="flex flex-col md:flex-row items-center gap-8">
+                <div class="md:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80" alt="Equipo médico" class="rounded-lg shadow-xl w-full h-auto">
+                </div>
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-semibold mb-4">Nuestra Misión</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">En Salud Integral nos dedicamos a proporcionar atención médica de calidad con un enfoque humano y profesional. Nuestro equipo está comprometido con el bienestar de nuestros pacientes.</p>
+                    <h3 class="text-2xl font-semibold mb-4">Nuestra Visión</h3>
+                    <p class="text-gray-600 dark:text-gray-300">Ser reconocidos como el centro médico líder en nuestra comunidad, destacando por nuestra excelencia clínica, tecnología avanzada y trato personalizado.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Personal -->
+    <section id="team" class="py-16 bg-gray-50 dark:bg-[#032972]">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-primary dark:text-secondary">Nuestro Personal</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Médico 1 -->
+                <div class="bg-white dark:bg-gray-900 rounded-lg shadow-md overflow-hidden transition duration-300 hover:shadow-xl">
+                    <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Dra. María López" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Dra. María López</h3>
+                        <p class="text-secondary font-medium mb-3">Cardióloga</p>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Especialista en enfermedades cardiovasculares con más de 15 años de experiencia.</p>
+                        <button class="text-primary hover:text-blue-700 font-medium flex items-center">
+                            Ver perfil <i class="fas fa-arrow-right ml-2"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Médico 2 -->
+                <div class="bg-white dark:bg-gray-900 rounded-lg shadow-md overflow-hidden transition duration-300 hover:shadow-xl">
+                    <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1528&q=80" alt="Dr. Carlos Martínez" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Dr. Carlos Martínez</h3>
+                        <p class="text-secondary font-medium mb-3">Pediatra</p>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Especializado en el cuidado de niños y adolescentes con enfoque preventivo.</p>
+                        <button class="text-primary hover:text-blue-700 font-medium flex items-center">
+                            Ver perfil <i class="fas fa-arrow-right ml-2"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Médico 3 -->
+                <div class="bg-white dark:bg-gray-900 rounded-lg shadow-md overflow-hidden transition duration-300 hover:shadow-xl">
+                    <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Dra. Ana Rodríguez" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Dra. Ana Rodríguez</h3>
+                        <p class="text-secondary font-medium mb-3">Dermatóloga</p>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Experta en diagnóstico y tratamiento de enfermedades de la piel, pelo y uñas.</p>
+                        <button class="text-primary hover:text-blue-700 font-medium flex items-center">
+                            Ver perfil <i class="fas fa-arrow-right ml-2"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Contacto -->
+    <section id="contact" class="py-16 bg-white dark:bg-[#0c2451]">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-primary dark:text-secondary">Contáctanos</h2>
+            
+            <div class="max-w-2xl mx-auto bg-gray-50 dark:bg-[#032972] rounded-xl shadow-md p-8">
+                <div class="text-center mb-8">
+                    <h3 class="text-2xl font-semibold mb-2">¿Cómo podemos ayudarte?</h3>
+                    <p class="text-gray-600 dark:text-gray-300">Elige la opción que mejor se adapte a tu necesidad</p>
+                </div>
+                
+                <!-- Botón de WhatsApp flotante -->
+                <div class="fixed bottom-6 right-6 z-50">
+                    <div id="whatsappContainer" class="relative">
+                        <button id="whatsappBtn" class="whatsapp-btn bg-whatsapp text-white p-4 rounded-full shadow-lg">
+                            <i class="fab fa-whatsapp text-2xl"></i>
+                        </button>
+                        
+                        <!-- Opciones de mensajes (ocultas inicialmente) -->
+                        <div id="messageOptions" class="hidden absolute bottom-16 right-0 w-64 bg-white dark:bg-gray-700 rounded-lg shadow-xl p-2 space-y-2">
+                            <p class="text-sm font-medium text-gray-700 dark:text-gray-300 px-2 py-1">Selecciona un mensaje:</p>
+                            
+                            <button class="message-option w-full text-left px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-green-50 dark:hover:bg-gray-600" 
+                                    data-message="Hola, me gustaría agendar una cita médica">
+                                <i class="fas fa-calendar-check mr-2 text-whatsapp"></i> Agendar cita
+                            </button>
+                            
+                            <button class="message-option w-full text-left px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-green-50 dark:hover:bg-gray-600" 
+                                    data-message="Buen día, necesito información sobre los horarios de atención">
+                                <i class="fas fa-clock mr-2 text-whatsapp"></i> Consultar horarios
+                            </button>
+                            
+                            <button class="message-option w-full text-left px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-green-50 dark:hover:bg-gray-600" 
+                                    data-message="Quisiera saber el costo de una consulta con especialista">
+                                <i class="fas fa-dollar-sign mr-2 text-whatsapp"></i> Consultar precios
+                            </button>
+                            
+                            <button class="message-option w-full text-left px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-green-50 dark:hover:bg-gray-600" 
+                                    data-message="Necesito ayuda con una emergencia médica">
+                                <i class="fas fa-ambulance mr-2 text-whatsapp"></i> Emergencia médica
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Opciones de contacto simplificadas -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Llamada telefónica -->
+                    <a href="tel:+0983576134" class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-sm border border-gray-200 dark:border-gray-600 flex flex-col items-center text-center hover:shadow-md transition duration-300">
+                        <div class="bg-blue-100 dark:bg-blue-900 p-4 rounded-full mb-4">
+                            <i class="fas fa-phone-alt text-primary text-2xl"></i>
+                        </div>
+                        <h4 class="font-bold text-lg mb-2">Llámanos</h4>
+                        <p class="text-gray-600 dark:text-gray-300 mb-3">Habla directamente con nuestro personal</p>
+                        <span class="text-primary font-medium">+1 234 567 890</span>
+                    </a>
+                    
+                    <!-- Correo electrónico -->
+                    <a href="mailto:contacto@saludintegral.com" class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-sm border border-gray-200 dark:border-gray-600 flex flex-col items-center text-center hover:shadow-md transition duration-300">
+                        <div class="bg-blue-100 dark:bg-blue-900 p-4 rounded-full mb-4">
+                            <i class="fas fa-envelope text-primary text-2xl"></i>
+                        </div>
+                        <h4 class="font-bold text-lg mb-2">Escríbenos</h4>
+                        <p class="text-gray-600 dark:text-gray-300 mb-3">Responderemos en menos de 24 horas</p>
+                        <span class="text-primary font-medium">contacto@saludintegral.com</span>
+                    </a>
+                    
+                    <!-- WhatsApp -->
+                    <button id="whatsappDesktopBtn" class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-sm border border-gray-200 dark:border-gray-600 flex flex-col items-center text-center hover:shadow-md transition duration-300">
+                        <div class="bg-green-100 dark:bg-green-900 p-4 rounded-full mb-4">
+                            <i class="fab fa-whatsapp text-whatsapp text-2xl"></i>
+                        </div>
+                        <h4 class="font-bold text-lg mb-2">WhatsApp</h4>
+                        <p class="text-gray-600 dark:text-gray-300 mb-3">Chatea con nosotros al instante</p>
+                        <span class="text-whatsapp font-medium">Enviar mensaje</span>
+                    </button>
+                    
+                    <!-- Ubicación -->
+                    <a href="https://maps.google.com" target="_blank" class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-sm border border-gray-200 dark:border-gray-600 flex flex-col items-center text-center hover:shadow-md transition duration-300">
+                        <div class="bg-blue-100 dark:bg-blue-900 p-4 rounded-full mb-4">
+                            <i class="fas fa-map-marker-alt text-primary text-2xl"></i>
+                        </div>
+                        <h4 class="font-bold text-lg mb-2">Visítanos</h4>
+                        <p class="text-gray-600 dark:text-gray-300 mb-3">Av. Principal 1234, Ciudad</p>
+                        <span class="text-primary font-medium">Ver en mapa</span>
+                    </a>
+                </div>
+                
+                <!-- Horario de atención -->
+                <div class="mt-8 text-center">
+                    <h4 class="font-bold text-lg mb-2">Horario de atención</h4>
+                    <p class="text-gray-600 dark:text-gray-300">
+                        Lunes a Viernes: 8:00 - 18:00<br>
+                        Sábados: 9:00 - 13:00
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <div class="flex items-center space-x-2">
+                        <div class="bg-primary p-2 rounded-full">
+                            <i class="fas fa-heartbeat text-white"></i>
+                        </div>
+                        <span class="text-xl font-bold">Salud Integral</span>
+                    </div>
+                    <p class="text-gray-400 mt-2">Cuidando tu salud con excelencia</p>
+                </div>
+                <div class="flex flex-col md:flex-row md:space-x-8 space-y-2 md:space-y-0 text-center md:text-left">
+                    <a href="#" class="text-gray-400 hover:text-white" data-section="about">Quiénes Somos</a>
+                    <a href="#" class="text-gray-400 hover:text-white" data-section="team">Personal</a>
+                    <a href="#" class="text-gray-400 hover:text-white" data-section="contact">Contáctanos</a>
+                    <a href="#" class="text-gray-400 hover:text-white">Política de Privacidad</a>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-6 pt-6 text-center text-gray-400">
+                <p>&copy; 2023 Salud Integral. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+   <script>
+        // Manejo de eventos de navegación
+        document.querySelectorAll('a[data-section]').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const sectionId = this.getAttribute('data-section');
+                document.getElementById(sectionId).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                
+                // Cerrar menú móvil si está abierto
+                const mobileMenu = document.getElementById('mobileMenu');
+                if (mobileMenu.classList.contains('hidden') === false) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+
+        // Manejo del botón del logo
+        document.getElementById('logoBtn').addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Manejo del menú móvil
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Manejo de botones de agendar cita
+        const handleAppointment = () => {
+            document.getElementById('contact').scrollIntoView({
+                behavior: 'smooth'
+            });
+        };
+        
+        document.getElementById('appointmentBtn').addEventListener('click', handleAppointment);
+        document.getElementById('mobileAppointmentBtn').addEventListener('click', handleAppointment);
+
+        // Manejo del modo oscuro/claro según preferencia del sistema
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+
+        // Escuchar cambios en la preferencia de color del sistema
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+            if (event.matches) {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+        });
+
+        // Manejo del botón de WhatsApp y mensajes prefijados
+        const whatsappBtn = document.getElementById('whatsappBtn');
+        const whatsappDesktopBtn = document.getElementById('whatsappDesktopBtn');
+        const messageOptions = document.getElementById('messageOptions');
+        
+        // Mostrar/ocultar opciones de mensaje
+        whatsappBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            messageOptions.classList.toggle('hidden');
+        });
+        
+        whatsappDesktopBtn.addEventListener('click', function() {
+            // Abrir WhatsApp con mensaje predeterminado
+            window.open('https://wa.me/+593983576134?text=Hola,%20me%20gustaría%20obtener%20más%20información', '_blank');
+        });
+        
+        // Seleccionar mensaje prefijado
+        document.querySelectorAll('.message-option').forEach(option => {
+            option.addEventListener('click', function() {
+                const message = encodeURIComponent(this.getAttribute('data-message'));
+                window.open(`https://wa.me/+593983576134?text=${message}`, '_blank');
+                messageOptions.classList.add('hidden');
+            });
+        });
+        
+        // Cerrar opciones al hacer clic fuera
+        document.addEventListener('click', function(e) {
+            if (!e.target.closest('#whatsappContainer')) {
+                messageOptions.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>
