@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ángeles que Cuidan</title>
     <base target="_self">
+    <link rel="icon" type="image/png" href="Assets/descargar.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/@preline/preline@2.0.0/dist/preline.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -82,6 +83,7 @@
                 <!-- Menú de navegación -->
                 <nav class="hidden md:flex items-center space-x-8">
                     <a href="#" class="nav-link text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary font-medium" data-section="about">Quiénes Somos</a>
+                    <a href="#" class="block py-2 text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary font-medium" data-section="services">Servicios</a>
                     <a href="#" class="nav-link text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary font-medium" data-section="team">Personal</a>
                     <a href="#" class="nav-link text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary font-medium" data-section="contact">Contáctanos</a>
                     <button id="appointmentBtn" class="bg-secondary hover:bg-green-600 text-white px-4 py-2 rounded-lg transition duration-300 transform hover:scale-105">
@@ -98,6 +100,7 @@
             <!-- Menú móvil desplegable -->
             <div id="mobileMenu" class="hidden md:hidden mt-4 pb-4">
                 <a href="#" class="block py-2 text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary font-medium" data-section="about">Quiénes Somos</a>
+                <a href="#" class="block py-2 text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary font-medium" data-section="services">Servicios</a>
                 <a href="#" class="block py-2 text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary font-medium" data-section="team">Personal</a>
                 <a href="#" class="block py-2 text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary font-medium" data-section="contact">Contáctanos</a>
                 <button id="mobileAppointmentBtn" class="mt-2 w-full bg-secondary hover:bg-green-600 text-white px-4 py-2 rounded-lg transition duration-300">
@@ -112,7 +115,7 @@
         <div class="container mx-auto px-4 text-center">
             <h1 class="text-4xl md:text-5xl font-bold mb-4">Porque tu Tranquilidad nos importa</h1>
             <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">Profesionales comprometidos con tu bienestar integral</p>
-            <button class="bg-primary hover:bg-blue-700 text-white px-6 py-3 rounded-lg text-lg font-medium transition duration-300 transform hover:scale-105">
+            <button   id="whatsappDesktopBtn" class="bg-primary hover:bg-blue-700 text-white px-6 py-3 rounded-lg text-lg font-medium transition duration-300 transform hover:scale-105">
                 <i class="fas fa-phone-alt mr-2"></i>Llamar ahora
             </button>
         </div>
@@ -135,6 +138,66 @@
             </div>
         </div>
     </section>
+
+    <section id="services" class="py-16 bg-gray-50 dark:bg-[#032972] text-gray-800 dark:text-light">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center mb-12 text-primary dark:text-secondary">
+      Nuestros servicios asistenciales
+    </h2>
+    <p class="text-center text-gray-600 dark:text-gray-300 mb-10 max-w-2xl mx-auto">
+      Planes que se adaptan a tus necesidades y las del paciente.
+    </p>
+
+    <!-- Grid de servicios -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      
+      <!-- Servicio 1 -->
+      <div class="bg-white dark:bg-[#0c2451] rounded-xl shadow-md p-6 flex flex-col items-start transition hover:shadow-xl">
+        <div class="bg-blue-100 dark:bg-blue-900 p-4 rounded-full mb-4">
+          <i class="fas fa-user-nurse text-primary text-2xl"></i>
+        </div>
+        <h3 class="text-xl font-semibold mb-2">Enfermeras a domicilio</h3>
+        <p class="text-gray-600 dark:text-gray-300">
+          Obtén tranquilidad y aporta un mayor bienestar al paciente desde la comodidad y seguridad de casa.
+        </p>
+      </div>
+
+      <!-- Servicio 2 -->
+      <div class="bg-white dark:bg-[#0c2451] rounded-xl shadow-md p-6 flex flex-col items-start transition hover:shadow-xl">
+        <div class="bg-green-100 dark:bg-green-900 p-4 rounded-full mb-4">
+          <i class="fas fa-hand-holding-heart text-secondary text-2xl"></i>
+        </div>
+        <h3 class="text-xl font-semibold mb-2">Cuidados del adulto mayor</h3>
+        <p class="text-gray-600 dark:text-gray-300">
+          Cuenta con la tranquilidad de tener una profesional en todo momento que le aporte bienestar, compañía y apoyo.
+        </p>
+      </div>
+
+      <!-- Servicio 3 -->
+      <div class="bg-white dark:bg-[#0c2451] rounded-xl shadow-md p-6 flex flex-col items-start transition hover:shadow-xl">
+        <div class="bg-pink-100 dark:bg-pink-900 p-4 rounded-full mb-4">
+          <i class="fas fa-heartbeat text-pink-600 text-2xl"></i>
+        </div>
+        <h3 class="text-xl font-semibold mb-2">Cuidados paliativos</h3>
+        <p class="text-gray-600 dark:text-gray-300">
+          Están enfocados en que el paciente no sienta dolor, donde se sienta confortable y cómodo.
+        </p>
+      </div>
+
+      <!-- Servicio 4 -->
+      <div class="bg-white dark:bg-[#0c2451] rounded-xl shadow-md p-6 flex flex-col items-start transition hover:shadow-xl">
+        <div class="bg-purple-100 dark:bg-purple-900 p-4 rounded-full mb-4">
+          <i class="fas fa-syringe text-purple-600 text-2xl"></i>
+        </div>
+        <h3 class="text-xl font-semibold mb-2">Aplicación de medicamentos endovenosos en casa</h3>
+        <p class="text-gray-600 dark:text-gray-300">
+          Recibe tratamiento endovenoso directamente en casa y evita el estrés y riesgo de movilizarte.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
 
     <!-- Sección Personal -->
     <section id="team" class="py-16 bg-gray-50 dark:bg-[#032972]">
@@ -263,13 +326,13 @@
                 </div>
                 
                 <!-- Horario de atención -->
-                <div class="mt-8 text-center">
+                <!--<div class="mt-8 text-center">
                     <h4 class="font-bold text-lg mb-2">Horario de atención</h4>
                     <p class="text-gray-600 dark:text-gray-300">
                         Lunes a Viernes: 8:00 - 18:00<br>
                         Sábados: 9:00 - 13:00
                     </p>
-                </div>
+                </div>-->
             </div>
         </div>
     </section>
@@ -289,6 +352,7 @@
                 </div>
                 <div class="flex flex-col md:flex-row md:space-x-8 space-y-2 md:space-y-0 text-center md:text-left">
                     <a href="#" class="text-gray-400 hover:text-white" data-section="about">Quiénes Somos</a>
+                    <a href="#" class="text-gray-400 hover:text-white" data-section="services">Servicios</a>
                     <a href="#" class="text-gray-400 hover:text-white" data-section="team">Personal</a>
                     <a href="#" class="text-gray-400 hover:text-white" data-section="contact">Contáctanos</a>
                     <a href="ppol.html" class="text-gray-400 hover:text-white">Política de Privacidad</a>
@@ -301,94 +365,70 @@
     </footer>
 
    <script>
-        // Manejo de eventos de navegación
-        document.querySelectorAll('a[data-section]').forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                const sectionId = this.getAttribute('data-section');
-                document.getElementById(sectionId).scrollIntoView({
-                    behavior: 'smooth'
-                });
-                
-                // Cerrar menú móvil si está abierto
-                const mobileMenu = document.getElementById('mobileMenu');
-                if (mobileMenu.classList.contains('hidden') === false) {
-                    mobileMenu.classList.add('hidden');
-                }
-            });
+// Manejo de eventos de navegación
+document.querySelectorAll('a[data-section]').forEach(link => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const sectionId = this.getAttribute('data-section');
+        document.getElementById(sectionId).scrollIntoView({
+            behavior: 'smooth'
         });
-
-        // Manejo del botón del logo
-        document.getElementById('logoBtn').addEventListener('click', function() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-
-        // Manejo del menú móvil
-        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
-            const mobileMenu = document.getElementById('mobileMenu');
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // Manejo de botones de agendar cita
-        const handleAppointment = () => {
-            document.getElementById('contact').scrollIntoView({
-                behavior: 'smooth'
-            });
-        };
         
-        document.getElementById('appointmentBtn').addEventListener('click', handleAppointment);
-        document.getElementById('mobileAppointmentBtn').addEventListener('click', handleAppointment);
-
-        // Manejo del modo oscuro/claro según preferencia del sistema
-        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            document.documentElement.classList.add('dark');
-        } else {
-            document.documentElement.classList.remove('dark');
+        const mobileMenu = document.getElementById('mobileMenu');
+        if (!mobileMenu.classList.contains('hidden')) {
+            mobileMenu.classList.add('hidden');
         }
+    });
+});
 
-        // Escuchar cambios en la preferencia de color del sistema
-        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
-            if (event.matches) {
-                document.documentElement.classList.add('dark');
-            } else {
-                document.documentElement.classList.remove('dark');
-            }
-        });
+// Botón logo
+document.getElementById('logoBtn').addEventListener('click', function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
 
-        // Manejo del botón de WhatsApp y mensajes prefijados
-        const whatsappBtn = document.getElementById('whatsappBtn');
-        const whatsappDesktopBtn = document.getElementById('whatsappDesktopBtn');
-        const messageOptions = document.getElementById('messageOptions');
-        
-        // Mostrar/ocultar opciones de mensaje
-        whatsappBtn.addEventListener('click', function(e) {
-            e.stopPropagation();
-            messageOptions.classList.toggle('hidden');
-        });
-        
-        whatsappDesktopBtn.addEventListener('click', function() {
-            // Abrir WhatsApp con mensaje predeterminado
-            window.open('https://wa.me/+593980361951?', '_blank');
-        });
-        
-        // Seleccionar mensaje prefijado
-        document.querySelectorAll('.message-option').forEach(option => {
-            option.addEventListener('click', function() {
-                const message = encodeURIComponent(this.getAttribute('data-message'));
-                window.open(`https://wa.me/+593980361951?text=${message}`, '_blank');
-                messageOptions.classList.add('hidden');
-            });
-        });
-        
-        // Cerrar opciones al hacer clic fuera
-        document.addEventListener('click', function(e) {
-            if (!e.target.closest('#whatsappContainer')) {
-                messageOptions.classList.add('hidden');
-            }
-        });
+// Menú móvil
+document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+    document.getElementById('mobileMenu').classList.toggle('hidden');
+});
+
+// Botones agendar cita
+const handleAppointment = () => {
+    document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+};
+document.getElementById('appointmentBtn').addEventListener('click', handleAppointment);
+document.getElementById('mobileAppointmentBtn').addEventListener('click', handleAppointment);
+
+// 🔹 Forzar modo oscuro siempre
+document.documentElement.classList.add('dark');
+
+// WhatsApp
+const whatsappBtn = document.getElementById('whatsappBtn');
+const whatsappDesktopBtn = document.getElementById('whatsappDesktopBtn');
+const messageOptions = document.getElementById('messageOptions');
+
+whatsappBtn.addEventListener('click', function(e) {
+    e.stopPropagation();
+    messageOptions.classList.toggle('hidden');
+});
+
+whatsappDesktopBtn.addEventListener('click', function() {
+    window.open('https://wa.me/+593980361951?', '_blank');
+});
+
+document.querySelectorAll('.message-option').forEach(option => {
+    option.addEventListener('click', function() {
+        const message = encodeURIComponent(this.getAttribute('data-message'));
+        window.open(`https://wa.me/+593980361951?text=${message}`, '_blank');
+        messageOptions.classList.add('hidden');
+    });
+});
+
+document.addEventListener('click', function(e) {
+    if (!e.target.closest('#whatsappContainer')) {
+        messageOptions.classList.add('hidden');
+    }
+});
+
     </script>
 </body>
 </html>

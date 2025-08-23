@@ -1,12 +1,226 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Servicios</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Política de Privacidad — Ángeles que Cuidan</title>
+  <base target="_self">
+  <link rel="icon" type="image/png" href="Assets/descargar.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@preline/preline@2.0.0/dist/preline.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#3B82F6',
+            secondary: '#10B981',
+            dark: '#032972',
+            light: '#F8FAFC',
+            whatsapp: '#25D366'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .logo-container { transition: all 0.3s ease; }
+    .logo-container:hover { transform: scale(1.05); }
+    .nav-link { position: relative; }
+    .nav-link::after { content: ''; position: absolute; width: 0; height: 2px; bottom: -2px; left: 0; background-color: #3B82F6; transition: width 0.3s ease; }
+    .nav-link:hover::after { width: 100%; }
+  </style>
 </head>
-<body>
-    <h1>Nuestros Servicios</h1>
-    <a href="index.html">Volver al inicio</a>
+<body class="bg-gray-50 dark:bg-[#032972] text-gray-800 dark:text-light">
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-white dark:bg-[#032972] text-gray-800 dark:text-light border-b border-gray-100/20">
+    <div class="container mx-auto px-4 py-3">
+      <div class="flex justify-between items-center">
+        <!-- Logo (mantener misma ruta/imagen) -->
+        <a href="index.html" class="logo-container flex items-center space-x-2 focus:outline-none">
+          <img src="Assets/VECILOGO AZULp.jpeg" width="226" height="96" alt="Ángeles que Cuidan" />
+        </a>
+        <!-- Menú de navegación -->
+        <nav class="hidden md:flex items-center space-x-8">
+          <a href="index.html#about" class="nav-link text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary font-medium">Quiénes Somos</a>
+          <a href="index.html#team" class="nav-link text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary font-medium">Personal</a>
+          <a href="index.html#contact" class="nav-link text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary font-medium">Contáctanos</a>
+          <a class="bg-secondary hover:bg-green-600 text-white px-4 py-2 rounded-lg transition duration-300 transform hover:scale-105" href="tel:+593980361951">
+            <i class="fas fa-calendar-check mr-2"></i>Agendar Cita
+          </a>
+        </nav>
+        <!-- Menú móvil -->
+        <button id="mobileMenuBtn" class="md:hidden text-gray-700 dark:text-gray-300 focus:outline-none">
+          <i class="fas fa-bars text-2xl"></i>
+        </button>
+      </div>
+      <!-- Menú móvil -->
+      <div id="mobileMenu" class="hidden md:hidden mt-4 pb-4">
+        <a href="index.html#about" class="block py-2 text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary font-medium">Quiénes Somos</a>
+        <a href="index.html#team" class="block py-2 text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary font-medium">Personal</a>
+        <a href="index.html#contact" class="block py-2 text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary font-medium">Contáctanos</a>
+        <a href="tel:+593980361951" class="mt-2 w-full inline-flex items-center justify-center bg-secondary hover:bg-green-600 text-white px-4 py-2 rounded-lg transition duration-300">
+          <i class="fas fa-calendar-check mr-2"></i>Agendar Cita
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero / Encabezado de la política -->
+  <section class="bg-white dark:bg-[#0c2451]">
+    <div class="container mx-auto px-4 py-12 md:py-16">
+      <div class="max-w-4xl mx-auto">
+        <h1 class="text-3xl md:text-4xl font-bold text-primary dark:text-secondary">Política de Privacidad</h1>
+        <p class="mt-3 text-gray-600 dark:text-gray-300">Última actualización: 22 de agosto de 2025</p>
+        <div class="mt-6 p-4 rounded-xl bg-blue-50 dark:bg-blue-900/30 text-blue-900 dark:text-blue-100 border border-blue-200/50 dark:border-blue-800/50">
+          <p class="text-sm"><strong>Aviso:</strong> Este documento está adaptado a la <em>Ley Orgánica de Protección de Datos Personales de Ecuador (LOPDP)</em> y regulaciones conexas. No constituye asesoría legal. Ajuste los datos de contacto y verifique con su asesor jurídico.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contenido -->
+  <main class="container mx-auto px-4 pb-20">
+    <div class="max-w-4xl mx-auto space-y-10">
+
+      <section class="bg-gray-50 dark:bg-[#032972] border border-gray-200/60 dark:border-gray-700/60 rounded-2xl p-6 md:p-8 shadow-sm">
+        <h2 class="text-2xl font-semibold text-primary dark:text-secondary mb-3">1. Responsable e información de contacto</h2>
+        <p class="text-gray-700 dark:text-gray-200">El responsable del tratamiento de datos personales es <span class="font-medium">Ángeles que Cuidan</span> (en adelante, el “Centro”). Para ejercer sus derechos o realizar consultas sobre privacidad puede escribir a: <a href="mailto:privacidad@ejemplo.com" class="text-primary underline">privacidad@ejemplo.com</a>.</p>
+      </section>
+
+      <section class="bg-gray-50 dark:bg-[#032972] border border-gray-200/60 dark:border-gray-700/60 rounded-2xl p-6 md:p-8 shadow-sm">
+        <h2 class="text-2xl font-semibold text-primary dark:text-secondary mb-3">2. Datos personales que tratamos</h2>
+        <ul class="list-disc ml-6 space-y-2 text-gray-700 dark:text-gray-200">
+          <li><span class="font-medium">Datos de contacto:</span> nombre, teléfono, correo electrónico, ciudad.</li>
+          <li><span class="font-medium">Datos de uso de WhatsApp:</span> número telefónico, mensajes enviados/recibidos, fecha y hora de contacto.</li>
+          <li><span class="font-medium">Datos de atención:</span> información necesaria para agendar citas, coordinar servicios y gestionar pagos. <strong>No utilice WhatsApp para enviar diagnósticos, resultados o información clínica sensible.</strong></li>
+          <li><span class="font-medium">Datos técnicos mínimos del sitio web:</span> direcciones IP, identificadores de dispositivo, y cookies esenciales para seguridad y funcionamiento.</li>
+        </ul>
+      </section>
+
+      <section class="bg-gray-50 dark:bg-[#032972] border border-gray-200/60 dark:border-gray-700/60 rounded-2xl p-6 md:p-8 shadow-sm">
+        <h2 class="text-2xl font-semibold text-primary dark:text-secondary mb-3">3. Finalidades del tratamiento</h2>
+        <ul class="list-disc ml-6 space-y-2 text-gray-700 dark:text-gray-200">
+          <li>Atender y gestionar sus solicitudes realizadas por WhatsApp y otros canales.</li>
+          <li>Agendar citas, coordinar atención domiciliaria u hospitalaria, y dar seguimiento a su caso.</li>
+          <li>Enviar recordatorios operativos (p. ej., confirmación de citas, cambios de horario).</li>
+          <li>Mejorar la calidad del servicio y la seguridad del sitio.</li>
+          <li>Dar cumplimiento a obligaciones legales y requerimientos de autoridades.</li>
+        </ul>
+      </section>
+
+      <section class="bg-gray-50 dark:bg-[#032972] border border-gray-200/60 dark:border-gray-700/60 rounded-2xl p-6 md:p-8 shadow-sm">
+        <h2 class="text-2xl font-semibold text-primary dark:text-secondary mb-3">4. Bases legales aplicables (LOPDP)</h2>
+        <ul class="list-disc ml-6 space-y-2 text-gray-700 dark:text-gray-200">
+          <li><span class="font-medium">Consentimiento:</span> cuando usted inicia la comunicación por WhatsApp u otros formularios.</li>
+          <li><span class="font-medium">Ejecución de medidas precontractuales/contractuales:</span> para gestionar sus citas y prestación de servicios.</li>
+          <li><span class="font-medium">Cumplimiento legal:</span> conservación de información según normativa sanitaria, tributaria o de seguridad.</li>
+          <li><span class="font-medium">Interés legítimo:</span> seguridad de la información, mejora del servicio y prevención del fraude.</li>
+          <li><span class="font-medium">Datos sensibles de salud:</span> solo se tratarán con su consentimiento explícito y mediante canales adecuados y seguros, nunca por WhatsApp.</li>
+        </ul>
+      </section>
+
+      <section class="bg-gray-50 dark:bg-[#032972] border border-gray-200/60 dark:border-gray-700/60 rounded-2xl p-6 md:p-8 shadow-sm">
+        <h2 class="text-2xl font-semibold text-primary dark:text-secondary mb-3">5. Uso específico del botón de WhatsApp</h2>
+        <ul class="list-disc ml-6 space-y-2 text-gray-700 dark:text-gray-200">
+          <li>Al hacer clic en el botón, será redirigido a la aplicación/versión web de WhatsApp, un servicio provisto por terceros (Meta Platforms). Su uso se rige por sus propias políticas y términos.</li>
+          <li>Los mensajes enviados por WhatsApp no son un canal de telemedicina ni de emergencia. Para urgencias, use los números de emergencia locales.</li>
+          <li>Evite compartir resultados clínicos, diagnósticos, imágenes médicas o datos sensibles por WhatsApp. Le indicaremos un canal seguro cuando corresponda.</li>
+          <li>El Centro puede registrar su número y el contenido operativo del intercambio para dar respuesta y seguimiento a su solicitud.</li>
+        </ul>
+      </section>
+
+      <section class="bg-gray-50 dark:bg-[#032972] border border-gray-200/60 dark:border-gray-700/60 rounded-2xl p-6 md:p-8 shadow-sm">
+        <h2 class="text-2xl font-semibold text-primary dark:text-secondary mb-3">6. Conservación de datos</h2>
+        <p class="text-gray-700 dark:text-gray-200">Conservaremos sus datos durante el tiempo necesario para cumplir las finalidades indicadas y los plazos exigidos por la normativa aplicable. Transcurridos dichos plazos, los datos se suprimirán, anonimizarán o archivarán de forma segura.</p>
+      </section>
+
+      <section class="bg-gray-50 dark:bg-[#032972] border border-gray-200/60 dark:border-gray-700/60 rounded-2xl p-6 md:p-8 shadow-sm">
+        <h2 class="text-2xl font-semibold text-primary dark:text-secondary mb-3">7. Destinatarios y encargados</h2>
+        <p class="text-gray-700 dark:text-gray-200">Podremos compartir datos con proveedores que prestan servicios para el Centro (p. ej., alojamiento web, sistemas de gestión, herramientas de mensajería), bajo acuerdos de confidencialidad y tratamiento de datos. WhatsApp es un servicio de terceros; al usarlo, usted acepta sus términos y políticas. No vendemos datos personales.</p>
+      </section>
+
+      <section class="bg-gray-50 dark:bg-[#032972] border border-gray-200/60 dark:border-gray-700/60 rounded-2xl p-6 md:p-8 shadow-sm">
+        <h2 class="text-2xl font-semibold text-primary dark:text-secondary mb-3">8. Transferencias internacionales</h2>
+        <p class="text-gray-700 dark:text-gray-200">Algunos proveedores pueden operar desde fuera de Ecuador. En tales casos, adoptaremos medidas para asegurar un nivel adecuado de protección conforme a la LOPDP, incluyendo cláusulas contractuales y evaluaciones de riesgo. En el uso de WhatsApp, los datos pueden circular en infraestructuras de terceros ajenos al Centro.</p>
+      </section>
+
+      <section class="bg-gray-50 dark:bg-[#032972] border border-gray-200/60 dark:border-gray-700/60 rounded-2xl p-6 md:p-8 shadow-sm">
+        <h2 class="text-2xl font-semibold text-primary dark:text-secondary mb-3">9. Derechos de los titulares</h2>
+        <p class="text-gray-700 dark:text-gray-200">Usted puede ejercer los derechos reconocidos por la LOPDP: acceso, rectificación y actualización, eliminación, oposición, portabilidad y suspensión del tratamiento, entre otros. Para ejercerlos, escriba a <a href="mailto:privacidad@ejemplo.com" class="text-primary underline">privacidad@ejemplo.com</a>. Responderemos dentro de los plazos legales.</p>
+      </section>
+
+      <section class="bg-gray-50 dark:bg-[#032972] border border-gray-200/60 dark:border-gray-700/60 rounded-2xl p-6 md:p-8 shadow-sm">
+        <h2 class="text-2xl font-semibold text-primary dark:text-secondary mb-3">10. Seguridad de la información</h2>
+        <p class="text-gray-700 dark:text-gray-200">Implementamos medidas técnicas y organizativas razonables para proteger los datos personales contra acceso, uso o divulgación no autorizados. No obstante, ningún método de transmisión o almacenamiento es completamente seguro; recomendamos no compartir información clínica por WhatsApp.</p>
+      </section>
+
+      <section class="bg-gray-50 dark:bg-[#032972] border border-gray-200/60 dark:border-gray-700/60 rounded-2xl p-6 md:p-8 shadow-sm">
+        <h2 class="text-2xl font-semibold text-primary dark:text-secondary mb-3">11. Menores de edad</h2>
+        <p class="text-gray-700 dark:text-gray-200">Cuando corresponda, el tratamiento de datos de menores requerirá consentimiento del representante legal y el uso de canales idóneos. No atendemos solicitudes por WhatsApp directamente de menores sin autorización.</p>
+      </section>
+
+      <section class="bg-gray-50 dark:bg-[#032972] border border-gray-200/60 dark:border-gray-700/60 rounded-2xl p-6 md:p-8 shadow-sm">
+        <h2 class="text-2xl font-semibold text-primary dark:text-secondary mb-3">12. Cookies y tecnologías similares</h2>
+        <p class="text-gray-700 dark:text-gray-200">Utilizamos cookies esenciales para el funcionamiento del sitio (seguridad, balanceo de carga y preferencias de visualización). No empleamos cookies publicitarias de terceros en esta página de política. Puede gestionar cookies desde la configuración de su navegador.</p>
+      </section>
+
+      <section class="bg-gray-50 dark:bg-[#032972] border border-gray-200/60 dark:border-gray-700/60 rounded-2xl p-6 md:p-8 shadow-sm">
+        <h2 class="text-2xl font-semibold text-primary dark:text-secondary mb-3">13. Cambios a esta política</h2>
+        <p class="text-gray-700 dark:text-gray-200">Podemos actualizar esta política para reflejar cambios legales o de servicio. Publicaremos la versión vigente en este mismo apartado indicando la fecha de última actualización.</p>
+      </section>
+
+      <div class="flex items-start gap-4 p-4 rounded-xl bg-amber-50 dark:bg-amber-900/30 text-amber-900 dark:text-amber-100 border border-amber-200/50 dark:border-amber-800/50">
+        <i class="fas fa-triangle-exclamation mt-1"></i>
+        <p class="text-sm">Para reclamos o consultas formales sobre protección de datos puede escribir a <a href="mailto:privacidad@ejemplo.com" class="underline">privacidad@ejemplo.com</a>. Si considera que su solicitud no ha sido atendida, puede acudir a la autoridad competente conforme a la LOPDP.</p>
+      </div>
+
+      <!-- Botón de WhatsApp informativo (opcional, sin abrir chats) -->
+      <div class="mt-6">
+        <a href="https://wa.me/+593980361951" target="_blank" class="inline-flex items-center gap-2 bg-whatsapp text-white px-5 py-3 rounded-xl shadow-md hover:shadow-lg transition whatsapp-btn">
+          <i class="fab fa-whatsapp text-xl"></i>
+          <span>Contactar por WhatsApp</span>
+        </a>
+        <p class="text-xs text-gray-500 dark:text-gray-300 mt-2">Al usar WhatsApp usted acepta sus términos y políticas de privacidad.</p>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-8">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div class="mb-4 md:mb-0">
+          <div class="flex items-center space-x-2">
+            <img src="Assets/descargar.png" width="76" height="46" alt="Logo" />
+            <span class="text-xl font-awesome">Ángeles <br /> que Cuidan</span>
+          </div>
+          <p class="text-gray-400 mt-2">Porque tu Tranquilidad nos importa</p>
+        </div>
+        <div class="flex flex-col md:flex-row md:space-x-8 space-y-2 md:space-y-0 text-center md:text-left">
+          <a href="index.html#about" class="text-gray-400 hover:text-white">Quiénes Somos</a>
+          <a href="index.html#team" class="text-gray-400 hover:text-white">Personal</a>
+          <a href="index.html#contact" class="text-gray-400 hover:text-white">Contáctanos</a>
+          <a href="ppol.html" class="text-white font-medium">Política de Privacidad</a>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 mt-6 pt-6 text-center text-gray-400">
+        <p>&copy; 2025 Ángeles que Cuidan. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Forzar modo oscuro como en index.html
+    document.documentElement.classList.add('dark');
+
+    // Menú móvil
+    document.getElementById('mobileMenuBtn').addEventListener('click', function () {
+      document.getElementById('mobileMenu').classList.toggle('hidden');
+    });
+  </script>
 </body>
 </html>
